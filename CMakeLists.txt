@@ -3,4 +3,4 @@ project(IGNORE_learn_cpp)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(IGNORE_learn_cpp main.cpp)
+add_executable(IGNORE_learn_cpp dev/devmain.cpp)
