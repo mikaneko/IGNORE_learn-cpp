@@ -37,40 +37,40 @@
 //
 //Process finished with exit code 0
 
-//ÒÔÉÏÊÇÔËĞĞ½á¹û
+//ä»¥ä¸Šæ˜¯è¿è¡Œç»“æœ
 /*
-Éè¼ÆÀà Loan£¬²¢ÀûÓÃÕâ¸öÀàÍê³ÉÏÂÁĞ²Ù×÷
-- ÓÉÓÃ»§ÊäÈë´û¿î×Ü¶î£¬´û¿î×ÜÄêÏŞ£¬´û¿îÄêÀûÂÊ
-- ·Ö±ğÒÔµÈ¶î±¾½ğºÍµÈ¶î±¾Ï¢·¨¼ÆËã·ÖÆÚ»¹¿î¼Æ»®¡£»¹¿îËã·¨¼ûPPT.
-- ÒÔ´û¿î×Ü¶î50ÍòÔª£¬10Äê£¬ÄêÀûÂÊ5.39%ÎªÀı£¬±È½ÏÁ½ÖÖ·½°¸»¹¿î×Ü¶îµÄ²îÖµ¡£
-- ÒÔ´û¿î×Ü¶î5ÍòÔª£¬1Äê£¬ÄêÀûÂÊ7%ÎªÀı£¬Êä³ö·ÖÆÚ»¹¿îµÄ¼Æ»®µ½ÎÄ¼ş²¢¶ÁÈ¡ÎÄ¼şºó
-  Êä³öµ½¿ØÖÆÌ¨£¬Êä³ö·¶Àı¼ûÏÂ±í¡£
+è®¾è®¡ç±» Loanï¼Œå¹¶åˆ©ç”¨è¿™ä¸ªç±»å®Œæˆä¸‹åˆ—æ“ä½œ
+- ç”±ç”¨æˆ·è¾“å…¥è´·æ¬¾æ€»é¢ï¼Œè´·æ¬¾æ€»å¹´é™ï¼Œè´·æ¬¾å¹´åˆ©ç‡
+- åˆ†åˆ«ä»¥ç­‰é¢æœ¬é‡‘å’Œç­‰é¢æœ¬æ¯æ³•è®¡ç®—åˆ†æœŸè¿˜æ¬¾è®¡åˆ’ã€‚è¿˜æ¬¾ç®—æ³•è§PPT.
+- ä»¥è´·æ¬¾æ€»é¢50ä¸‡å…ƒï¼Œ10å¹´ï¼Œå¹´åˆ©ç‡5.39%ä¸ºä¾‹ï¼Œæ¯”è¾ƒä¸¤ç§æ–¹æ¡ˆè¿˜æ¬¾æ€»é¢çš„å·®å€¼ã€‚
+- ä»¥è´·æ¬¾æ€»é¢5ä¸‡å…ƒï¼Œ1å¹´ï¼Œå¹´åˆ©ç‡7%ä¸ºä¾‹ï¼Œè¾“å‡ºåˆ†æœŸè¿˜æ¬¾çš„è®¡åˆ’åˆ°æ–‡ä»¶å¹¶è¯»å–æ–‡ä»¶å
+  è¾“å‡ºåˆ°æ§åˆ¶å°ï¼Œè¾“å‡ºèŒƒä¾‹è§ä¸‹è¡¨ã€‚
 
-  ÎÄ¼ş¶ÁĞ´ÒªÇó
-- ±àĞ´³ÌĞò£¬Êä³öµ½txtÎÄ¼ş£¨×¢Òâ£º´æ´¢Ê±¸÷Êı×ÖµÄ·Ö¸ô£¬·ñÔò¶ÁÈ¡Ê±ÎŞ·¨ÊµÏÖ£©
-- ±àĞ´³ÌĞò£¬¶ÁÈ¡ÎÄ¼şÊı¾İ£¬Êä³öµ½console´°¿Ú¡£
-  £¨×¢ÒâÎÄ¼şµÄÃüÃû£¬±£Ö¤ÄãÃÇËùÓĞÈËµÄ³ÌĞòÔÚÒ»¸öÎÄ¼ş¼ĞÏÂÒ²ÄÜÕÒµ½¸÷×ÔµÄÎÄ¼ş£©
+  æ–‡ä»¶è¯»å†™è¦æ±‚
+- ç¼–å†™ç¨‹åºï¼Œè¾“å‡ºåˆ°txtæ–‡ä»¶ï¼ˆæ³¨æ„ï¼šå­˜å‚¨æ—¶å„æ•°å­—çš„åˆ†éš”ï¼Œå¦åˆ™è¯»å–æ—¶æ— æ³•å®ç°ï¼‰
+- ç¼–å†™ç¨‹åºï¼Œè¯»å–æ–‡ä»¶æ•°æ®ï¼Œè¾“å‡ºåˆ°consoleçª—å£ã€‚
+  ï¼ˆæ³¨æ„æ–‡ä»¶çš„å‘½åï¼Œä¿è¯ä½ ä»¬æ‰€æœ‰äººçš„ç¨‹åºåœ¨ä¸€ä¸ªæ–‡ä»¶å¤¹ä¸‹ä¹Ÿèƒ½æ‰¾åˆ°å„è‡ªçš„æ–‡ä»¶ï¼‰
 
 
-Êä³ö½á¹ûµ½txtÎÄ¼ş£¬Êä³ö·¶Àı£º
+è¾“å‡ºç»“æœåˆ°txtæ–‡ä»¶ï¼Œè¾“å‡ºèŒƒä¾‹ï¼š
 
-´û¿î×Ü¶î: 50ÍòÔª
-´û¿îÄêÏŞ: 10
-´û¿îÄêÀûÂÊ: 7 %
-µÈ¶î±¾Ï¢·¨»¹¿î¼Æ»®: ÀÛ¼ÆÀûÏ¢1916.05Ôª£¬ÀÛ¼Æ»¹¿î51916.05Ôª
-Monthly   Payment(Ôª)   Interest(Ôª)   Principal(Ôª)   Balance(Ôª)
+è´·æ¬¾æ€»é¢: 50ä¸‡å…ƒ
+è´·æ¬¾å¹´é™: 10
+è´·æ¬¾å¹´åˆ©ç‡: 7 %
+ç­‰é¢æœ¬æ¯æ³•è¿˜æ¬¾è®¡åˆ’: ç´¯è®¡åˆ©æ¯1916.05å…ƒï¼Œç´¯è®¡è¿˜æ¬¾51916.05å…ƒ
+Monthly   Payment(å…ƒ)   Interest(å…ƒ)   Principal(å…ƒ)   Balance(å…ƒ)
  1        4326.34       291.67         4034.67         45965.33
  ......
 
-µÈ¶î±¾½ğ·¨»¹¿î¼Æ»®:  ÀÛ¼ÆÀûÏ¢1895.83Ôª£¬ÀÛ¼Æ»¹¿î51895.83Ôª
-Monthly   Payment(Ôª)   Interest(Ôª)   Principal(Ôª)   Balance(Ôª)
+ç­‰é¢æœ¬é‡‘æ³•è¿˜æ¬¾è®¡åˆ’:  ç´¯è®¡åˆ©æ¯1895.83å…ƒï¼Œç´¯è®¡è¿˜æ¬¾51895.83å…ƒ
+Monthly   Payment(å…ƒ)   Interest(å…ƒ)   Principal(å…ƒ)   Balance(å…ƒ)
  1        4458.33       291.67         4166.67         45833.33
  ......
 
 */
 
-//Àà³ÉÔ±±äÁ¿µÄ¶¨Òå£¬½ö¹©²Î¿¼£¬¿É¸ù¾İĞèÒª×ÔĞĞ¶¨Òå¡£
-//ÀàµÄ³ÉÔ±º¯Êı°´ĞèÒª×ÔĞĞ¶¨Òå¡£
+//ç±»æˆå‘˜å˜é‡çš„å®šä¹‰ï¼Œä»…ä¾›å‚è€ƒï¼Œå¯æ ¹æ®éœ€è¦è‡ªè¡Œå®šä¹‰ã€‚
+//ç±»çš„æˆå‘˜å‡½æ•°æŒ‰éœ€è¦è‡ªè¡Œå®šä¹‰ã€‚
 #include <iostream>
 #include <iomanip>
 #include <cmath>
@@ -86,11 +86,11 @@ struct StatTrak
 class MonthlyPayment
 {
 private:
-    unsigned NoMonth;      //»¹¿îµÄµÚn¸öÔÂ
-    double monPay;       //µÚn¸öÔÂµÄ»¹¿î¶î
-    double monCorpus;    //µÚn¸öÔÂµÄ»¹¿îÖĞµÄ±¾½ğÊı
-    double monInterest;  //µÚn¸öÔÂµÄ»¹¿îÖĞµÄÀûÏ¢Êı
-    double balance;      //±¾½ğÓà¶î
+    unsigned NoMonth;      //è¿˜æ¬¾çš„ç¬¬nä¸ªæœˆ
+    double monPay;       //ç¬¬nä¸ªæœˆçš„è¿˜æ¬¾é¢
+    double monCorpus;    //ç¬¬nä¸ªæœˆçš„è¿˜æ¬¾ä¸­çš„æœ¬é‡‘æ•°
+    double monInterest;  //ç¬¬nä¸ªæœˆçš„è¿˜æ¬¾ä¸­çš„åˆ©æ¯æ•°
+    double balance;      //æœ¬é‡‘ä½™é¢
 
 public:
     void setNoMonth(unsigned a)
@@ -154,18 +154,18 @@ public:
 class Loan
 {
 private:
-    double amount;        //´û¿î×Ü¶î  Loan Amount
-    double annualIRate;   //ÄêÀûÂÊ    Annual Interest Rate
-    unsigned numOfYear;     //´û¿îÄêÏŞ  Number of Years
-    //ÒÔÉÏÎªÓÃ»§ÊäÈëµÄ»ù±¾ĞÅÏ¢
+    double amount;        //è´·æ¬¾æ€»é¢  Loan Amount
+    double annualIRate;   //å¹´åˆ©ç‡    Annual Interest Rate
+    unsigned numOfYear;     //è´·æ¬¾å¹´é™  Number of Years
+    //ä»¥ä¸Šä¸ºç”¨æˆ·è¾“å…¥çš„åŸºæœ¬ä¿¡æ¯
 
-    //ÒÔÏÂÊı¾İ³ÉÔ±×ÔĞĞ°´ĞèÒª¶¨Òå
-    unsigned sumMonth;      //×Ü»¹¿îÔÂÊı
-    MonthlyPayment equalCorpus; //µÈ¶î±¾½ğ·¨Equality corpus method
-    MonthlyPayment equalCandI;  //µÈ¶î±¾Ï¢·¨Equality corpus and interest method
-    unsigned sumPayEC;      //µÈ¶î±¾½ğ·¨×Ü»¹¿î¶î
-    unsigned sumPayECI;     //µÈ¶î±¾Ï¢·¨×Ü»¹¿î¶î
-    int delta;         //Á½ÖÖ»¹¿î·½Ê½×Ü»¹¿î¶îµÄ²î¶î
+    //ä»¥ä¸‹æ•°æ®æˆå‘˜è‡ªè¡ŒæŒ‰éœ€è¦å®šä¹‰
+    unsigned sumMonth;      //æ€»è¿˜æ¬¾æœˆæ•°
+    MonthlyPayment equalCorpus; //ç­‰é¢æœ¬é‡‘æ³•Equality corpus method
+    MonthlyPayment equalCandI;  //ç­‰é¢æœ¬æ¯æ³•Equality corpus and interest method
+    unsigned sumPayEC;      //ç­‰é¢æœ¬é‡‘æ³•æ€»è¿˜æ¬¾é¢
+    unsigned sumPayECI;     //ç­‰é¢æœ¬æ¯æ³•æ€»è¿˜æ¬¾é¢
+    int delta;         //ä¸¤ç§è¿˜æ¬¾æ–¹å¼æ€»è¿˜æ¬¾é¢çš„å·®é¢
     double monthIRate;
 
     std::string writefile_destination;
@@ -198,7 +198,7 @@ public:
         }
         //////
 
-        StatTrak ST;        //ÉèÖÃ¼ÆÊıÆ÷
+        StatTrak ST;        //è®¾ç½®è®¡æ•°å™¨
         ST.SUM_INTEREST = 0;
         ST.SUM_PAY = 0;
 
@@ -208,9 +208,9 @@ public:
         {
             equalCorpus.setNoMonth(i);
             equalCorpus.setMonInterest(equalCorpus.getBalance() * monthIRate);
-            ST.SUM_INTEREST += equalCorpus.getMonInterest();                 //Í³¼ÆIntest×ÜºÍ
+            ST.SUM_INTEREST += equalCorpus.getMonInterest();                 //ç»Ÿè®¡Intestæ€»å’Œ
             equalCorpus.cal_monPay();
-            ST.SUM_PAY += equalCorpus.getMonPay();                          //Í³¼ÆPay×ÜºÍ
+            ST.SUM_PAY += equalCorpus.getMonPay();                          //ç»Ÿè®¡Payæ€»å’Œ
             equalCorpus.setBalance(equalCorpus.getBalance() - equalCorpus.getMonCorpus());  //minus the balance
             equalCorpus.show_info();        //show
             //////
@@ -254,7 +254,7 @@ public:
         }
         //////
 
-        StatTrak ST;        //ÉèÖÃ¼ÆÊıÆ÷
+        StatTrak ST;        //è®¾ç½®è®¡æ•°å™¨
         ST.SUM_INTEREST = 0;
         ST.SUM_PAY = 0;
 
@@ -302,11 +302,11 @@ public:
 
     void cal_2_methods_and_writefile()
     {
-        ////Çå³ıÔ­±¾µÄÎÄ¼şÄÚÈİ
+        ////æ¸…é™¤åŸæœ¬çš„æ–‡ä»¶å†…å®¹
         std::ofstream ofileclear;
         ofileclear.open(writefile_destination);
         ofileclear.close();
-        ////ÀûÓÃ×·¼Ó·½Ê½Ğ´ÈëÎÄ¼ş
+        ////åˆ©ç”¨è¿½åŠ æ–¹å¼å†™å…¥æ–‡ä»¶
         writefile = true;
         show_via_equalCorpus();
         show_via_equalCandI();
