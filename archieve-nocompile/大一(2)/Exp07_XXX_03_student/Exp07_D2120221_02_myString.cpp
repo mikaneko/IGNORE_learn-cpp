@@ -1,3 +1,4 @@
+//build encoding: gbk
 /*
 参考P226，例7.4对c字符串的处理，
 完备你自定义的MyString类。使之能自动适应不同的串长度。
@@ -18,6 +19,8 @@
 //下列成员函数在你自定义的myString类中，
 //若有，改造为动态内存申请的。
 //若无，新增这些成员函数，且使用动态内存申请适应串长变化。
+#define DebugMode 0
+
 #define _POSSIBLE_MAX_INPUT_STRING_LENGTH_ 100
 
 #include <iostream>
@@ -32,15 +35,15 @@ private:
 
 public:
     mystring();
-    mystring(char *);     //C风格字符串强制转换为mystring类，要考虑串长
-    mystring(mystring &); //深复制，要考虑串长
+    mystring(const char *);     //C风格字符串强制转换为mystring类，要考虑串长
+    mystring(const mystring &); //深复制，要考虑串长
     ~mystring();
     void show() const;
 
-    char &operator[](int i);          //返回引用，可读可写，注意越界处理，测试时，注意用英文字符串测试
-    mystring &operator=(mystring &);  //深复制，要考虑串长
-    mystring &operator=(char *);      //C风格字符串强制转换为mystring类，要考虑串长
-    mystring &operator+=(mystring &); //要考虑串长
+    char &operator[](int i);                //返回引用，可读可写，注意越界处理，测试时，注意用英文字符串测试
+    mystring &operator=(const mystring &);  //深复制，要考虑串长
+    mystring &operator=(const char *);      //C风格字符串强制转换为mystring类，要考虑串长
+    mystring &operator+=(const mystring &); //要考虑串长
 
     //仅支持与本类型对象的运算，故使用成员函数。【不支持与C风格字符串的运算】
     bool operator<(const mystring &) const;
@@ -49,6 +52,8 @@ public:
 
     friend istream &operator>>(istream &, mystring &); //要考虑串长
     friend ostream &operator<<(ostream &, const mystring &);
+
+    void CorrectCinBug(); //额，没有办法的办法
 };
 
 mystring::mystring()
@@ -57,7 +62,7 @@ mystring::mystring()
     last = -1;
 }
 
-mystring::mystring(char *s)
+mystring::mystring(const char *s)
 {
     str = new char[strlen(s) + 1];
     last = strlen(s);
@@ -67,10 +72,10 @@ mystring::mystring(char *s)
     }
 }
 
-mystring::mystring(mystring &strs)
+mystring::mystring(const mystring &strs)
 {
     last = strs.last;
-    str = new char[last];
+    str = new char[last + 1];
     for (int i = 0; i <= last; i++)
     {
         str[i] = strs.str[i];
@@ -102,14 +107,14 @@ char &mystring::operator[](int i)
     return str[i];
 }
 
-mystring &mystring::operator=(mystring &strs)
+mystring &mystring::operator=(const mystring &strs)
 {
     if (str)
     {
         delete[] str;
     }
     last = strs.last;
-    str = new char[last];
+    str = new char[last + 1];
     for (int i = 0; i <= last; i++)
     {
         str[i] = strs.str[i];
@@ -117,7 +122,7 @@ mystring &mystring::operator=(mystring &strs)
     return *this;
 }
 
-mystring &mystring::operator=(char *s)
+mystring &mystring::operator=(const char *s)
 {
     if (str)
     {
@@ -132,14 +137,15 @@ mystring &mystring::operator=(char *s)
     return *this;
 }
 
-mystring &mystring::operator+=(mystring &strs)
+mystring &mystring::operator+=(const mystring &strs)
 {
+    mystring temp(*this);
     if (str)
     {
         delete[] str;
     }
-    mystring temp(*this);
-    str = new char[strs.last + last - 1];
+    str = new char[strs.last + last + 1];
+
     for (int i = 0; i < last; i++)
     {
         str[i] = temp.str[i];
@@ -148,6 +154,7 @@ mystring &mystring::operator+=(mystring &strs)
     {
         str[i] = strs.str[i - last];
     }
+    last += strs.last;
     return *this;
 }
 
@@ -160,33 +167,11 @@ bool mystring::operator==(const mystring &strs) const
     return strcmp(str, strs.str) == 0;
 }
 
-// ERROR
 mystring mystring::operator+(const mystring &strs) const
 {
-    mystring temp;
-    temp.last = last + strs.last - 1;
-    for (int i = 0; i < last; i++)
-    {
-        temp.str[i] = str[i];
-    }
-    for (int i = last; i < last + strs.last - 1; i++)
-    {
-        temp.str[i] = strs.str[i - last];
-    }
+    mystring temp(*this);
+    temp += strs;
     return temp;
-}
-
-istream &operator>>(istream &is, mystring &stro)
-{
-    if (stro.str)
-    {
-        delete[] stro.str;
-    }
-    char temp[_POSSIBLE_MAX_INPUT_STRING_LENGTH_];
-    is >> temp;
-    stro.str = new char[strlen(temp) + 1];
-    is >> stro.str;
-    return is;
 }
 
 ostream &operator<<(ostream &os, const mystring &stro)
@@ -202,23 +187,63 @@ ostream &operator<<(ostream &os, const mystring &stro)
     return os;
 }
 
+//这个是真的不会处理，干脆就这样吧，底下有个CorrectCinBug方法，算是重新计算长度分配空间吧
+istream &operator>>(istream &is, mystring &stro)
+{
+    if (stro.str)
+    {
+        delete[] stro.str;
+    }
+    stro.str = new char[_POSSIBLE_MAX_INPUT_STRING_LENGTH_ + 1];
+    is >> stro.str;
+    stro.last = _POSSIBLE_MAX_INPUT_STRING_LENGTH_;
+    return is;
+}
+
+//魔法de成员方法
+void mystring::CorrectCinBug()
+{
+    mystring temp(*this);
+    last = strlen(str);
+    if (str)
+    {
+        delete str;
+    }
+    str = new char[last + 1];
+    for (int i = 0; i <= last; i++)
+    {
+        str[i] = temp.str[i];
+    }
+}
+
+#if DebugMode
 int main()
 {
 
     mystring name;
+    name = "haha";
     name.show();
-    name = "hel";
-    name.show();
+
     mystring xuehao("121");
     xuehao.show();
+
     name += xuehao;
     name.show();
-    cout << name[3] << endl;
-    cin >> name;
-    name.show();
+
+    cout << name[1] << endl;
+
     mystring dizhi;
     dizhi = xuehao + name;
+    dizhi.show();
 
-    system("pause");
+    cout << (xuehao < name) << endl;
+    cout << (xuehao == name) << endl;
+
+    mystring gongzuo;
+    cin >> gongzuo;
+    gongzuo.CorrectCinBug();
+    gongzuo.show();
+    cout << gongzuo << endl;
     return 0;
 }
+#endif
