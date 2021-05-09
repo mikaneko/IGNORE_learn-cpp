@@ -1,28 +1,28 @@
 /*
-Ï°Ìâ6.4£¬
-  ½¨Á¢¶ÔÊý×éÔªËØ½øÐÐË³ÐòºÍ¶Ô°ë²éÕÒµÄº¯ÊýÄ£°å£¬
-  ÈôÕÒµ½ÔªËØÔò·µ»ØÊý×éÏÂ±ê£¬ÕÒ²»µ½Ôò·µ»Ø-1¡£
+Ï°ï¿½ï¿½6.4ï¿½ï¿½
+  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½Í¶Ô°ï¿½ï¿½ï¿½ÒµÄºï¿½ï¿½ï¿½Ä£ï¿½å£¬
+  ï¿½ï¿½ï¿½Òµï¿½Ôªï¿½ï¿½ï¿½ò·µ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â±ê£¬ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ò·µ»ï¿½-1ï¿½ï¿½
 
-±à³ÌÒªÇó£º
-- Íê³Éº¯ÊýÄ£°åµÄ¶¨Òå¡£
-- ¶Ô°ë²éÕÒ²»ÏÞÖÆµÝ¹é»òµü´úÊµÏÖ£¬Ò²¿ÉÒÔÁ½ÖÖ·½Ê½¶¼ÊµÏÖ
-- ÔÚmain()ÖÐ·Ö±ðÊ¹ÓÃ£ºchar, int, double, C++±ê×¼stringÀà
-  ºÍ ×Ô¶¨ÒåµÄMyStringÀà£¬ÎåÖÖÊý¾ÝÀàÐÍ¶¨ÒåÊý×éÀàÐÍ£¬²¢Íê³É²âÊÔ¡£
-- ÎªÌá¸ß¿É¸´ÓÃÐÔ£¬½¨ÒéÓÃº¯ÊýÄ£°å¶¨Òå²âÊÔº¯Êý£¬Ìá¸ßÄãµÄ¹¤×÷Ð§ÂÊ¡£
-- ×¢Òâ·ÀÖ¹¶þ·Ö·¨ÏÝÈëËÀÑ­»·¡£
+ï¿½ï¿½ï¿½Òªï¿½ï¿½
+- ï¿½ï¿½Éºï¿½ï¿½ï¿½Ä£ï¿½ï¿½Ä¶ï¿½ï¿½å¡£
+- ï¿½Ô°ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ÆµÝ¹ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö£ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½Ê½ï¿½ï¿½Êµï¿½ï¿½
+- ï¿½ï¿½main()ï¿½Ð·Ö±ï¿½Ê¹ï¿½Ã£ï¿½char, int, double, C++ï¿½ï¿½×¼stringï¿½ï¿½
+  ï¿½ï¿½ ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½MyStringï¿½à£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½É²ï¿½ï¿½Ô¡ï¿½
+- Îªï¿½ï¿½ß¿É¸ï¿½ï¿½ï¿½ï¿½Ô£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãºï¿½ï¿½ï¿½Ä£ï¿½å¶¨ï¿½ï¿½ï¿½ï¿½Ôºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½Ð§ï¿½Ê¡ï¿½
+- ×¢ï¿½ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½ï¿½ï¿½
 */
 
 
 #include <iostream>
 
 
-//º¯ÊýÄ£°åÔ­ÐÍ£¬ÆäÖÐlowºÍhighÎª²éÕÒ·¶Î§£¬ÏÂ±êÇø¼ä
+//ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½Ô­ï¿½Í£ï¿½ï¿½ï¿½ï¿½ï¿½lowï¿½ï¿½highÎªï¿½ï¿½ï¿½Ò·ï¿½Î§ï¿½ï¿½ï¿½Â±ï¿½ï¿½ï¿½ï¿½ï¿½
 template<typename T>
 int SequenceSearch(const T *pA, T x, int low, int high);
 
 template<typename T>
 int BinarySearch(const T *pA, T x, int low, int high);
-//×¢ÒâÐÎ²ÎÎªÖ¸ÕëÀàÐÍÓëÐÎ²ÎÎªÊý×é£¬±¾ÖÊÉÏÊÇÏàÍ¬µÄ
+//×¢ï¿½ï¿½ï¿½Î²ï¿½ÎªÖ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î²ï¿½Îªï¿½ï¿½ï¿½é£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½
 
 template<typename T>
 int SequenceSearch(const T *pA, T x, int low, int high)
@@ -37,7 +37,7 @@ int SequenceSearch(const T *pA, T x, int low, int high)
     return -1;
 }
 
-//±¾Ëã·¨Ö»ÄÜÓÃÓÚ ¡°·ÇÖØ¸´¡± ¡°ÉýÐò¡± µÄÊýÁÐ
+//ï¿½ï¿½ï¿½ã·¨Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 template<typename T>
 int BinarySearch(const T *pA, T x, int low, int high)
 {
@@ -82,7 +82,7 @@ int BinarySearch(const T *pA, T x, int low, int high)
     return -1;
 
 }
-//×¢ÒâÐÎ²ÎÎªÖ¸ÕëÀàÐÍÓëÐÎ²ÎÎªÊý×é£¬±¾ÖÊÉÏÊÇÏàÍ¬µÄ
+//×¢ï¿½ï¿½ï¿½Î²ï¿½ÎªÖ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î²ï¿½Îªï¿½ï¿½ï¿½é£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½
 
 void test()
 {
